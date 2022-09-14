@@ -1,14 +1,15 @@
 import React from 'react'
 import '../styles/Post.css'
+import MyButton from './UI/button/MyButton'
 
-export default function Post(props) {
+export default function Post({ post }) {
   return (
     <div className='post'>
-      <h2 className="post__title">1. JS</h2>
+      <h2 className="post__title">{post.title}</h2>
       <div className="post__content">
-        <div>JS - ЯП</div>
+        <div>{post.body}</div>
       </div>
-      <div className="post__btns"><button>Удалить</button></div>
+      <div className="post__btns"><MyButton>Удалить</MyButton></div>
     </div>
   )
 }

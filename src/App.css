@@ -12,3 +12,8 @@
 .App {
   width: 80%;
 }
+
+.postForm__btns {
+  display: flex;
+  justify-content: end;
+}
