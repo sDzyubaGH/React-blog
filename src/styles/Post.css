@@ -1,0 +1,20 @@
+.post {
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 15px;
+}
+
+.post__title {
+  margin-bottom: 10px;
+}
+
+.post__content {
+  margin-bottom: 10px;
+}
+
+.post__btns {
+  display: flex;
+  justify-content: end;
+  padding-right: 10px;
+}
