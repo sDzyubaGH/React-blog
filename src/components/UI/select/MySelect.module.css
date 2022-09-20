@@ -1,0 +1,11 @@
+.mySelect {
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: box-shadow .2s ease;
+}
+
+.mySelect:hover {
+  box-shadow: 0 0 10px #000;
+}
