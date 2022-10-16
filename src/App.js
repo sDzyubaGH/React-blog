@@ -84,11 +84,12 @@ function App() {
           : <PostList remove={deletePost} posts={sortedAndSearchedPosts} />
       }
       <div className="pagination-btns">
-        {pagesArray.map((pageNum) => {
-          const btnClassName = pageNum === page ? 'current-page' : ''
-          return <MyButton onClick={(e) => changePage(pageNum)} className={pageNum === page ? 'current-page' : ''} key={pageNum}>{pageNum}</MyButton>
+        {console.log(posts)}
+        {
+          sortedAndSearchedPosts.length
+            ? pagesArray.map((pageNum) => <MyButton onClick={(e) => changePage(pageNum)} className={pageNum === page ? 'current-page' : ''} key={pageNum}>{pageNum}</MyButton>)
+            : <></>
         }
-        )}
       </div>
     </div>
   );
