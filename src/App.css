@@ -17,3 +17,17 @@
   display: flex;
   justify-content: end;
 }
+
+.pagination-btns {
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-btns > button {
+  margin: 0 10px;
+}
+
+button.current-page {
+  border-width: 2px;
+}

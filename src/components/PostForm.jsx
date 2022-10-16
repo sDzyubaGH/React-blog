@@ -35,6 +35,5 @@ export default function PostForm({ create }) {
         <MyButton onClick={addNewPost}>Создать</MyButton>
       </div>
     </form>
-
   )
 }
