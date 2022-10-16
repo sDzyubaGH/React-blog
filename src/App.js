@@ -56,7 +56,6 @@ function App() {
 
   function changePage(pageNum) {
     setPage(pageNum)
-    console.log(page)
   }
 
   return (
