@@ -5,7 +5,7 @@ import MyButton from './UI/button/MyButton'
 export default function Post({ post, remove }) {
   return (
     <div className='post'>
-      <h2 className="post__title">{post.title}</h2>
+      <h2 className="post__title"><span style={{'fontSize': '1em'}}>{post.id}</span>. {post.title}</h2>
       <div className="post__content">
         <div>{post.body}</div>
       </div>

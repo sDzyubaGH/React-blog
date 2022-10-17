@@ -11,6 +11,7 @@ import PostList from "./components/PostList";
 import MyButton from "./components/UI/button/MyButton";
 import Loader from "./components/UI/Loader/Loader";
 import MyModal from "./components/UI/MyModal/MyModal";
+import Pagination from "./components/UI/pagination/Pagination";
 import getPageCount from "./utils/pages";
 
 function App() {
@@ -22,8 +23,6 @@ function App() {
   const [limit, setLimit] = useState(10)
   const [page, setPage] = useState(1)
   // const [pagesArray, setPagesArray] = useState([])
-  const pagesArray = usePagination(totalPageCount)
-  console.log(pagesArray)
 
   const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
     const response = await PostService.getAll(limit, page)
@@ -83,14 +82,11 @@ function App() {
           ? <Loader />
           : <PostList remove={deletePost} posts={sortedAndSearchedPosts} />
       }
-      <div className="pagination-btns">
-        {console.log(posts)}
-        {
-          sortedAndSearchedPosts.length
-            ? pagesArray.map((pageNum) => <MyButton onClick={(e) => changePage(pageNum)} className={pageNum === page ? 'current-page' : ''} key={pageNum}>{pageNum}</MyButton>)
-            : <></>
-        }
-      </div>
+      {
+        sortedAndSearchedPosts.length
+          ? <Pagination page={page} totalPageCount={totalPageCount} changePage={changePage} />
+          : <></>
+      }
     </div>
   );
 }
