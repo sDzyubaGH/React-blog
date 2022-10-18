@@ -51,7 +51,7 @@ function Posts() {
   }
 
   return (
-    <div className="App">
+    <div className="container">
       <MyModal
         visible={modal}
         setVisible={setModal}

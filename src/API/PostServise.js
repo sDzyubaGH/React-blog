@@ -10,4 +10,14 @@ export default class PostService {
     })
     return request
   }
+
+  static async getOne(id) {
+    const request = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    return request
+  }
+
+  static async getComments(id) {
+    const request = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
+    return request
+  }
 }
