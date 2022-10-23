@@ -29,6 +29,10 @@
   margin: 0 10px;
 }
 
+.post__btns {
+  margin-top: 10px;
+}
+
 .post__btns>button {
   margin: 0 10px;
 }
